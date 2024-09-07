@@ -5,20 +5,8 @@ import { store } from 'core/store/store';
 import { setupTranslations } from 'i18n/setup';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { PokemonPage, PokemonsPage } from './pages';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <PokemonsPage />,
-  },
-  {
-    path: '/:name',
-    element: <PokemonPage />,
-  },
-]);
+import Router from './Router';
 
 setupTranslations();
 
@@ -27,7 +15,7 @@ const App = () => {
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <Theme>
-          <RouterProvider router={router} />
+          <Router />
         </Theme>
       </QueryClientProvider>
     </Provider>
