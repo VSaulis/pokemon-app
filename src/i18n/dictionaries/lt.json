@@ -1,0 +1,20 @@
+{
+  "pokemons": {
+    "Pokemons": "Pokemonai",
+    "Welcome to the Pokémon list page! Here, you'll find all available Pokemons": "Sveiki atvykę į Pokemonų puslapį! Čia rasite visus Pokemonus.",
+    "Here you will find information about pokemon": "Čia rasite informaciją apie Pokemoną.",
+    "Name": "Vardas",
+    "Actions": "Veiksmai",
+    "Details": "Informacija",
+    "Pokemon details": "Pokemono informacija"
+  },
+  "common": {
+    "Next": "Kitas",
+    "Previous": "Ankstesnis",
+    "Total": "Iš viso",
+    "Page size": "Rodoma",
+    "No results found": "Rezultatų nerasta",
+    "First": "Pirmas",
+    "Last": "Paskutinis"
+  }
+}

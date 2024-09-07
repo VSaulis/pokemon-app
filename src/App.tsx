@@ -1,26 +1,37 @@
+import { Theme } from '@radix-ui/themes';
+import { QueryClientProvider } from '@tanstack/react-query';
+import queryClient from 'core/query/client';
+import { store } from 'core/store/store';
+import { setupTranslations } from 'i18n/setup';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-function App() {
+import { PokemonPage, PokemonsPage } from './pages';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <PokemonsPage />,
+  },
+  {
+    path: '/:name',
+    element: <PokemonPage />,
+  },
+]);
+
+setupTranslations();
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <Theme>
+          <RouterProvider router={router} />
+        </Theme>
+      </QueryClientProvider>
+    </Provider>
   );
-}
+};
 
 export default App;

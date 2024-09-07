@@ -1,0 +1,20 @@
+{
+  "pokemons": {
+    "Pokemons": "Pokemons",
+    "Welcome to the Pokémon list page! Here, you'll find all available Pokemons": "Welcome to the Pokemon list page! Here, you'll find all available Pokemons.",
+    "Here you will find information about pokemon": "Here you will find information about pokemon.",
+    "Name": "Name",
+    "Actions": "Actions",
+    "Details": "Details",
+    "Pokemon details": "Pokemon details"
+  },
+  "common": {
+    "Next": "Next",
+    "Previous": "Previous",
+    "Total": "Total",
+    "Page size": "Page size",
+    "No results found": "No results found",
+    "First": "First",
+    "Last": "Last"
+  }
+}
