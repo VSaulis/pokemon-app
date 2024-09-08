@@ -1,6 +1,5 @@
 import { Flex, Grid, Heading, Separator } from '@radix-ui/themes';
-import { AbilitiesListItem } from 'api/clients/abilities/types';
-import { TypesListItem } from 'api/clients/types/types';
+import { Ability, Type } from 'api/clients/pokemons/types';
 import { Message } from 'common/components';
 import { usePokemonsTranslations } from 'i18n/hooks';
 import React, { useMemo } from 'react';
@@ -15,13 +14,9 @@ export interface PokemonDetailsProps {
 const PokemonDetails = ({ name }: PokemonDetailsProps) => {
   const { pokemon, isLoading } = usePokemon(name);
   const { t } = usePokemonsTranslations();
+  const types = useMemo<Type[]>(() => pokemon?.types.map(({ type }) => type) ?? [], [pokemon]);
 
-  const types = useMemo<TypesListItem[]>(
-    () => pokemon?.types.map(({ type }) => type) ?? [],
-    [pokemon],
-  );
-
-  const abilities = useMemo<AbilitiesListItem[]>(
+  const abilities = useMemo<Ability[]>(
     () => pokemon?.abilities.map(({ ability }) => ability) ?? [],
     [pokemon],
   );

@@ -1,19 +1,19 @@
 import { ColumnDef } from '@tanstack/react-table';
-import { AbilitiesListItem } from 'api/clients/abilities/types';
+import { Ability } from 'api/clients/pokemons/types';
 import { Table } from 'common/components';
 import { usePokemonsTranslations } from 'i18n/hooks';
 import React, { useMemo } from 'react';
 
 export interface AbilitiesTableProps {
   className?: string;
-  abilities: AbilitiesListItem[];
+  abilities: Ability[];
   isLoading: boolean;
 }
 
 const AbilitiesTable = ({ className, abilities, isLoading }: AbilitiesTableProps) => {
   const { t } = usePokemonsTranslations();
 
-  const columns = useMemo<ColumnDef<AbilitiesListItem>[]>(
+  const columns = useMemo<ColumnDef<Ability>[]>(
     () => [
       {
         id: 'name',

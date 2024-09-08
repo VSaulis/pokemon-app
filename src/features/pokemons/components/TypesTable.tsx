@@ -1,19 +1,19 @@
 import { ColumnDef } from '@tanstack/react-table';
-import { TypesListItem } from 'api/clients/types/types';
+import { Type } from 'api/clients/pokemons/types';
 import { Table } from 'common/components';
 import { usePokemonsTranslations } from 'i18n/hooks';
 import React, { useMemo } from 'react';
 
 export interface TypesTableProps {
   className?: string;
-  types: TypesListItem[];
+  types: Type[];
   isLoading: boolean;
 }
 
 const TypesTable = ({ className, types, isLoading }: TypesTableProps) => {
   const { t } = usePokemonsTranslations();
 
-  const columns = useMemo<ColumnDef<TypesListItem>[]>(
+  const columns = useMemo<ColumnDef<Type>[]>(
     () => [
       {
         id: 'name',
