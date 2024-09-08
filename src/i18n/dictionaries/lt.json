@@ -3,10 +3,17 @@
     "Pokemons": "Pokemonai",
     "Welcome to the Pokémon list page! Here, you'll find all available Pokemons": "Sveiki atvykę į Pokemonų puslapį! Čia rasite visus Pokemonus.",
     "Here you will find information about pokemon": "Čia rasite informaciją apie Pokemoną.",
-    "Name": "Vardas",
+    "Name": "Pavadinimas",
     "Actions": "Veiksmai",
     "Details": "Informacija",
-    "Pokemon details": "Pokemono informacija"
+    "Pokemon details": "Pokemono informacija",
+    "Types": "Tipai",
+    "Abilities": "Sugebėjimai",
+    "Base experience": "Patirtis",
+    "Weight": "Svoris",
+    "Height": "Ūgis",
+    "None": "Nėra",
+    "Pokemon is not found": "Pokemonas nerastas"
   },
   "common": {
     "Next": "Kitas",

@@ -1,7 +1,6 @@
-import { PokemonsPage } from 'pages/pokemons';
-import React, { lazy, Suspense } from 'react';
+import { PokemonPage, PokemonsPage } from 'pages';
+import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-const PokemonPage = lazy(() => import('pages/pokemons/PokemonPage'));
 
 const router = createBrowserRouter([
   {
@@ -10,11 +9,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/:name',
-    element: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PokemonPage />
-      </Suspense>
-    ),
+    element: <PokemonPage />,
   },
 ]);
 

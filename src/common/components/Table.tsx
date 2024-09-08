@@ -1,6 +1,8 @@
-import { Table as RadixTable, Spinner, Text } from '@radix-ui/themes';
+import { Table as RadixTable, Text } from '@radix-ui/themes';
 import { ColumnDef, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import { useCommonTranslations } from 'i18n/hooks';
+
+import Spinner from './Spinner';
 
 export interface TableProps<T> {
   className?: string;
@@ -37,7 +39,7 @@ const Table = <T,>({ columns, data, isLoading }: TableProps<T>) => {
         {isLoading && (
           <RadixTable.Row>
             <RadixTable.Cell align="center" colSpan={columns.length}>
-              <Spinner size="3" />
+              <Spinner />
             </RadixTable.Cell>
           </RadixTable.Row>
         )}

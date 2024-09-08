@@ -6,7 +6,14 @@
     "Name": "Name",
     "Actions": "Actions",
     "Details": "Details",
-    "Pokemon details": "Pokemon details"
+    "Pokemon details": "Pokemon details",
+    "Types": "Types",
+    "Abilities": "Abilities",
+    "Base experience": "Base experience",
+    "Weight": "Weight",
+    "Height": "Height",
+    "None": "None",
+    "Pokemon is not found": "Pokemon is not found"
   },
   "common": {
     "Next": "Next",
